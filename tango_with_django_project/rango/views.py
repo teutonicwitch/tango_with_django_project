@@ -24,8 +24,11 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    about = {'about': 'This tutorial has been put together by John Martin.'}
-    return render(request, 'rango/about.html', context=about)
+
+ print(request.method)
+
+ print(request.user)
+ return render(request, 'rango/about.html', {})
 
 def show_category(request, category_name_slug):
 
